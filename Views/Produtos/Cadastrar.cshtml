@@ -1,0 +1,17 @@
+@model CrudLoja.Models.Produto
+
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+<h2>Cadastro de produtos</h2>
+
+<form class="form-horizontal" asp-controller="Produtos" asp-action="Salvar" method="POST">
+    <input type="hidden" asp-for="Id">
+    <input type="text" class="form-control" asp-for="Nome" placeholder="Nome">
+    <input type="text" class="form-control" asp-for="Cor" placeholder="Cor">
+    <input type="number" class="form-control" asp-for="Valor" placeholder="Valor">
+    <input type="number" class="form-control" asp-for="Quantidade" placeholder="Quantidade">
+
+    <button class="btn btn-success">Cadastrar</button>
+</form>

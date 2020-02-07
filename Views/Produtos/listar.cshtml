@@ -1,0 +1,19 @@
+@model IEnumerable<CrudLoja.Models.Produto>
+
+
+<div class="text-center">
+    <h2>Todos os Produtos</h2>    
+</div>
+
+<a href="/Produtos/Cadastrar" class="btn btn-success">Novo prdouto</a>
+<hr>
+@foreach (var produto in Model)
+{
+    <h5>Nome: @produto.Nome</h5>
+    <h5>Cor: @produto.Cor</h5>
+    <h5>Quantidade: @produto.Quantidade</h5>
+    <h5>Valor: @produto.Valor</h5>
+    <a href="/Produtos/Editar/@produto.Id" class="btn btn-info">Editar</a>
+    <a href="/Produtos/Deletar/@produto.Id" class="btn btn-danger">Deletar</a>
+    <hr>
+}
